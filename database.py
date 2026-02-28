@@ -21,7 +21,7 @@ from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession
 from sqlalchemy.orm import sessionmaker
 
 # ── 1. Налаштування підключення до SQLite ──────────────────────────────
-engine = create_async_engine("postgresql+asyncpg://neondb_ownernpg_b6eYaODK3pFT@ep-restless-mud-aift3ear-pooler.c-4.us-east-1.aws.neon.techneondbsslmode=require&channel_binding=require", echo=False)
+engine = create_async_engine("postgresql+asyncpg://neondb_owner:npg_b6eYaODK3pFT@ep-restless-mud-aift3ear-pooler.c-4.us-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require", echo=False)
 Base = declarative_base()
 
 async_session = sessionmaker(
