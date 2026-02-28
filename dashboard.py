@@ -5,7 +5,7 @@ import pandas as pd
 # --- НАЛАШТУВАННЯ БЕЗПЕКИ ---
 # Для базової версії задамо пароль прямо тут.
 DOCTOR_PASSWORD = "medly_secure_2026"
-API_URL = "http://127.0.0.1:8000"
+API_URL = "https://bp-monitor-bot.onrender.com"
 
 # Налаштування сторінки (має бути найпершою командою)
 st.set_page_config(page_title="BP-Monitor: Панель лікаря", page_icon="🩺", layout="wide")
@@ -107,4 +107,5 @@ else:
         else:
             st.error(f"Помилка API: {response.status_code}")
     except requests.exceptions.ConnectionError:
+
         st.error("🚨 Не вдалося підключитися до API. Переконайтеся, що сервер Uvicorn працює в іншому терміналі!")
